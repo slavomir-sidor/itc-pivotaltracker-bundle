@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<container
+	xmlns="http://symfony.com/schema/dic/services"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+	<imports>
+		<import resource="Console/services.xml" />
+	</imports>
+
+
+	<services>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.http.client"
+			class="%sk.itc.pivotaltrackerbundle.http.client.class%">
+
+			<argument>%sk.itc.pivotaltrackerbundle.http.client.url%</argument>
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.api.v5"
+			class="%sk.itc.pivotaltrackerbundle.api.v5.class%">
+
+			<argument>%sk.itc.pivotaltrackerbundle.api.v5.token%</argument>
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.http.client" />
+
+			<argument
+				type="service"
+				id="logger" />
+
+		</service>
+
+	</services>
+
+</container>

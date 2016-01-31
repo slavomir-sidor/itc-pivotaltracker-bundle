@@ -1,0 +1,5 @@
+_assetic:
+    resource: .
+    type: assetic
+_app:
+    resource: /var/www/jahman/domains/itc-pivotaltracker-bundle.jahman/src/SK/ITC/ORMBundle/Resources/config/routing.xml

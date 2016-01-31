@@ -1,3 +1,6 @@
 /vendor/
 /target/
 /report/
+/cache/
+/logs/
+/.settings/

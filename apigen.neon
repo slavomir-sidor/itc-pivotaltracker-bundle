@@ -1,6 +1,6 @@
 source:
     - ./src
     - ./tests
-title: "Pivotal Tracker API Client"
+title: "ITC Pivotal Tracker API Client"
 
 destination: ./docs

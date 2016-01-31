@@ -1,0 +1,545 @@
+<?xml version="1.0" ?>
+<container
+	xmlns="http://symfony.com/schema/dic/services"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+	<services>
+
+		<!-- Pivotal Tracker API V5 Commands -->
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.account"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.account.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.account.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.account.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.accounts"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.accounts.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.accounts.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.accounts.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.accounts.summary"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.accounts.summary.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.accounts.summary.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.accounts.summary.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.account.memberships"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.account.memberships.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.account.memberships.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.account.memberships.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.activity"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.activity.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.activity.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.activity.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.attachments"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.attachments.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.attachments.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.attachments.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.comments"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.comments.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.comments.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.comments.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.epic"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.epic.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.epic.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.epic.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.epics"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.epics.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.epics.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.epics.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.exports"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.exports.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.exports.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.exports.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.iterations"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.iterations.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.iterations.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.iterations.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.labels"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.labels.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.labels.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.labels.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.me"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.me.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.me.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.me.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.notifications"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.notifications.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.notifications.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.notifications.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.project"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.project.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.project.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.project.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.project.history"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.project.history.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.project.history.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.project.history.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.project.integrations"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.project.integrations.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.project.integrations.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.project.integrations.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.project.memberships"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.project.memberships.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.project.memberships.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.project.memberships.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.project.webhooks"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.project.webhooks.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.project.webhooks.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.project.webhooks.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.project.webhooks"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.project.webhooks.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.project.webhooks.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.project.webhooks.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.projects"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.projects.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.projects.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.projects.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.request.aggregator"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.request.aggregator.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.request.aggregator.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.request.aggregator.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.saved.search"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.saved.search.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.saved.search.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.saved.search.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.source.commits"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.source.commits.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.source.commits.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.source.commits.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.stories"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.stories.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.stories.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.stories.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.story"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.story.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.story.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.story.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.story.tasks"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.story.tasks.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.story.tasks.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.story.tasks.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+		<service
+			id="sk.itc.pivotaltrackerbundle.command.api.v5.workspaces"
+			class="%sk.itc.pivotaltrackerbundle.command.api.v5.workspaces.class%">
+
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.workspaces.name%</argument>
+			<argument type="string">%sk.itc.pivotaltrackerbundle.command.api.v5.workspaces.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itc.pivotaltrackerbundle.api.v5" />
+
+			<tag name="console.command" />
+
+		</service>
+
+	</services>
+
+</container>
