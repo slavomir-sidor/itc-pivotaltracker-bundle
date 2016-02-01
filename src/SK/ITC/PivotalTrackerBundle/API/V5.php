@@ -38,12 +38,6 @@ class V5
 
 	/**
 	 *
-	 * @var
-	 */
-	private $raml;
-
-	/**
-	 *
 	 * @param string $token
 	 * @param Client $client
 	 * @param Logger $logger
@@ -53,7 +47,6 @@ class V5
 		$this->setToken( $token );
 		$this->setClient( $client );
 		$this->setLogger( $logger );
-
 	}
 
 	/**

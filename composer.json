@@ -44,8 +44,7 @@
 		"guzzlehttp/guzzle" : "~6.0",
 		"sk.itcloud.symfony/itc-bundle" : "dev-master",
 		"guzzlehttp/log-subscriber" : "dev-master",
-		"alecsammon/php-raml-parser" : "2.1.0",
-		"creads/api2symfony-bundle" : "1.0.0"
+		"alecsammon/php-raml-parser" : "dev-master"
 	},
 	"require-dev" : {
 		"phpunit/phpunit" : "4.8.*"
@@ -56,6 +55,9 @@
 		}, {
 			"type" : "vcs",
 			"url" : "git@github.com:slavomirkuzma/log-subscriber.git"
+		}, {
+			"type" : "vcs",
+			"url" : "git@github.com:slavomirkuzma/php-raml-parser.git"
 		}
 	]
 }
