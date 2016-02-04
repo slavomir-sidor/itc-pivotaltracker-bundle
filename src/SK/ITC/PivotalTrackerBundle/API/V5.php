@@ -121,15 +121,96 @@ class V5
 	public function getAccountsSummaries( $accountId = null, $withPermission = null )
 	{
 		$headers = $this->getHeaders();
-		$headers['query'] = [
-			'with_permission' => $withPermission
-		];
-
 		return json_decode( $this->getClient()
 			->get( '/services/v5/account_summaries', $headers )
 			->send()
 			->getBody( true ) );
 	}
+
+	public function getProjects( $project_ids = array() )
+	{
+		$headers = $this->getHeaders();
+
+		$query = [];
+
+		if( count( $project_ids ) > 0 )
+		{
+			$query['project_ids'] = $project_ids;
+		}
+
+		if( count( $query ) > 0 )
+		{
+			$headers['query'] = $query;
+		}
+
+		return json_decode( $this->getClient()
+			->get( '/services/v5/projects', $headers )
+			->send()
+			->getBody( true ) );
+	}
+
+	public function getStories( $project_id )
+	{
+		$headers = $this->getHeaders();
+		$query = [];
+		if( count( $query ) > 0 )
+		{
+			$headers['query'] = $query;
+		}
+
+		return json_decode(
+			$this->getClient()
+				->get( '/services/v5/projects/' . $project_id . '/stories', $headers )
+				->send()
+				->getBody( true ) );
+	}
+
+	public function getStoryTasks( $project_id, $story_id )
+	{
+		$headers = $this->getHeaders();
+
+		$query = [];
+
+		// if( $project_id !== null )
+		// {
+		// $query['project_id'] = $project_id;
+		// }
+
+		if( count( $query ) > 0 )
+		{
+			$headers['query'] = $query;
+		}
+
+		return json_decode(
+			$this->getClient()
+				->get( '/projects/' . $project_id . '/stories/' . $story_id . '/tasks', $headers )
+				->send()
+				->getBody( true ) );
+	}
+
+	public function getStory( $project_id, $story_id )
+	{
+		$headers = $this->getHeaders();
+
+		$query = [];
+
+		// if( $project_id !== null )
+		// {
+		// $query['project_id'] = $project_id;
+			// }
+
+			if( count( $query ) > 0 )
+			{
+				$headers['query'] = $query;
+			}
+
+			return json_decode(
+				$this->getClient()
+				->get( '/projects/' . $project_id . '/stories/' . $story_id , $headers )
+				->send()
+				->getBody( true ) );
+		}
+
 
 	public function getAccountsMemberships( $accountId )
 	{

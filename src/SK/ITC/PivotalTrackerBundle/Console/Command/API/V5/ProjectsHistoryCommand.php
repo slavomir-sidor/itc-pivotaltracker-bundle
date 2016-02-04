@@ -11,9 +11,8 @@ namespace SK\ITC\PivotalTrackerBundle\Console\Command\API\V5;
 use SK\ITC\PivotalTrackerBundle\Console\Command\AbstractCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Console\Input\InputOption;
 
-class AccountsCommand extends AbstractCommand
+class ProjectsHistoryCommand extends AbstractCommand
 {
 
 	/**
@@ -39,13 +38,12 @@ class AccountsCommand extends AbstractCommand
 	/**
 	 * (non-PHPdoc)
 	 *
-	 * @see \Symfony\Component\Console\Command\Command::configure()
+	 * @see \Symfony\Component\Console\Command\Command::execute()
 	 */
-	protected function configure()
+	public function execute( InputInterface $input, OutputInterface $output )
 	{
-		parent::configure();
-
-		$this->addOption( "account_id", "aid", InputOption::VALUE_REQUIRED, "ITCloud Pivotal Tracker API v5 Account ID." );
+		parent::execute( $input, $output );
+		$this->addOption( "project_ids", "pids", InputOption::VALUE_REQUIRED, "ITCloud Pivotal Tracker API v5. Comma seperated (int)s The IDs of the project." );
 	}
 
 	/**
@@ -58,14 +56,19 @@ class AccountsCommand extends AbstractCommand
 	{
 		if( NULL === $this->rows )
 		{
-			$accountId = $this->getInput()->getOption( 'account_id' );
+			$api = $this->getApi();
 
-			$accounts = $this->getApi()->getAccounts($accountId);
+			$project_id = $this->getInput()->getOption( 'project_id' );
+			$label = $this->getInput()->getOption( 'label' );
+			$start_date = $this->getInput()->getOption( 'start_date' );
+			$end_date = $this->getInput()->getOption( 'end_date' );
+
+			$items = $api->getProjects( $project_id, $label, $start_date, $end_date );
 			$rows = [];
 
-			foreach( $accounts as $account )
+			foreach( $items as $item )
 			{
-				$row = get_object_vars( $account );
+				$row = get_object_vars( $item );
 				$rows[] = $row;
 			}
 

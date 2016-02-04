@@ -85,7 +85,7 @@
 
 		<parameter key="sk.itc.pivotaltrackerbundle.command.api.v5.projects.name">itc:pt:projects</parameter>
 		<parameter key="sk.itc.pivotaltrackerbundle.command.api.v5.projects.description">ITCloud Pivotal Tracker API v5 Projects</parameter>
-		<parameter key="sk.itc.pivotaltrackerbundle.command.api.v5.projects.class">SK\ITC\PivotalTrackerBundle\Console\Command\API\V5\AccountCommand</parameter>
+		<parameter key="sk.itc.pivotaltrackerbundle.command.api.v5.projects.class">SK\ITC\PivotalTrackerBundle\Console\Command\API\V5\ProjectsCommand</parameter>
 
 		<parameter key="sk.itc.pivotaltrackerbundle.command.api.v5.request.aggregator.name">itc:pt:request-aggregator</parameter>
 		<parameter key="sk.itc.pivotaltrackerbundle.command.api.v5.request.aggregator.description">ITCloud Pivotal Tracker API v5 Request Aggregator</parameter>
@@ -101,15 +101,15 @@
 
 		<parameter key="sk.itc.pivotaltrackerbundle.command.api.v5.stories.name">itc:pt:stories</parameter>
 		<parameter key="sk.itc.pivotaltrackerbundle.command.api.v5.stories.description">ITCloud Pivotal Tracker API v5 Stories</parameter>
-		<parameter key="sk.itc.pivotaltrackerbundle.command.api.v5.stories.class">SK\ITC\PivotalTrackerBundle\Console\Command\API\V5\AccountCommand</parameter>
+		<parameter key="sk.itc.pivotaltrackerbundle.command.api.v5.stories.class">SK\ITC\PivotalTrackerBundle\Console\Command\API\V5\StoriesCommand</parameter>
 
 		<parameter key="sk.itc.pivotaltrackerbundle.command.api.v5.story.name">itc:pt:story</parameter>
 		<parameter key="sk.itc.pivotaltrackerbundle.command.api.v5.story.description">ITCloud Pivotal Tracker API v5 Story</parameter>
-		<parameter key="sk.itc.pivotaltrackerbundle.command.api.v5.story.class">SK\ITC\PivotalTrackerBundle\Console\Command\API\V5\AccountCommand</parameter>
+		<parameter key="sk.itc.pivotaltrackerbundle.command.api.v5.story.class">SK\ITC\PivotalTrackerBundle\Console\Command\API\V5\StoryCommand</parameter>
 
 		<parameter key="sk.itc.pivotaltrackerbundle.command.api.v5.story.tasks.name">itc:pt:story-tasks</parameter>
 		<parameter key="sk.itc.pivotaltrackerbundle.command.api.v5.story.tasks.description">ITCloud Pivotal Tracker API v5 Story Tasks</parameter>
-		<parameter key="sk.itc.pivotaltrackerbundle.command.api.v5.story.tasks.class">SK\ITC\PivotalTrackerBundle\Console\Command\API\V5\AccountCommand</parameter>
+		<parameter key="sk.itc.pivotaltrackerbundle.command.api.v5.story.tasks.class">SK\ITC\PivotalTrackerBundle\Console\Command\API\V5\StoryTaskCommand</parameter>
 
 		<parameter key="sk.itc.pivotaltrackerbundle.command.api.v5.workspaces.name">itc:pt:workspaces</parameter>
 		<parameter key="sk.itc.pivotaltrackerbundle.command.api.v5.workspaces.description">ITCloud Pivotal Tracker API v5 Story Workspaces</parameter>
