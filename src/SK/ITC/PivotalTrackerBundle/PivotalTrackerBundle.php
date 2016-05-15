@@ -4,7 +4,7 @@
  *
  * @author Slavomir Kuzma <slavomir.kuzma@gmail.com>
  */
-namespace SK\ITC\PivotalTrackerBundle;
+namespace SK\ITCPivotalTrackerBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
